@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jogo Incrível</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .btn-start {
+      background: #ff4b1f;
+      background: linear-gradient(to right, #ff4b1f, #ff9068);
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255,75,31,0.6);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-start:hover {
+      background: linear-gradient(to right, #ff9068, #ff4b1f);
+      transform: scale(1.05);
+    }
+
+    .btn-start:active {
+      transform: scale(0.95);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao Pula Escadinha</h1>
+  <button class="btn-start" onclick="alert('Vamos começar o jogo!')">Começar</button>
+
+  <footer>© 2025 Jogo Incrível. Todos os direitos reservados.</footer>
+</body>
+</html>
