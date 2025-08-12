@@ -1,70 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jogo Incrível</title>
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <div class="caixa-texto">
+        <div class="texto-limitado">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis lacus nec urna cursus laoreet. Praesent et magna a urna cursus blandit. Sed faucibus arcu a metus consectetur, a dictum leo ullamcorper. Curabitur at felis elit. Nullam dignissim, sapien in dapibus fermentum, ligula nisl finibus libero, at blandit nunc sapien non nisl.
+        </div>
+      </div>
+      
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(https://i.pinimg.com/1200x/79/96/b1/7996b1e642455cdb35b637e61660ffa9.jpg);
+            background-size: cover;          /* imagem cobre todo o fundo */
+            background-position: center;     /* centraliza a imagem */
+            background-repeat: no-repeat;    /* não repete */
+            background-color: black;
+            color: white;
+            font-family: system-ui, sans-serif;
+        }
+        h2 {
+            text-align: center;
+            color: rgb(46, 21, 72);
+            font-size: 50px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 20px;
+            color: aliceblue;
+            font-family: cursive;
+            text-align: center;
+        }
+        #botaometeoro {
+            width: 200px;
+            height: 100px;
+            background-image: url('data:image/jpeg;base64,...');
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+        }
+        .caixa-texto {
+            width: 800px;
+            height: 400px;
+            padding: 10px;
+            border: 2px solid rgb(97, 14, 14);
+            background-color: rgba(81, 18, 18, 0.5);
+            margin: 20px auto;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+        .texto-limitado {
+            width: 300px;
+            line-height: 1.2em;
+            max-height: calc(3.5em * 5);
+            overflow: hidden;
+            white-space: normal;
+            overflow-wrap: break-word;
+            margin: auto;
+            padding: 30px;
+        }
 
-    body {
-      background: linear-gradient(135deg, #c876f8,#ecfa81, #81adfa,#fa81e2, #81faad,#f94545);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
+        /* Caixa de texto com fundo semitransparente, borda e padding */
+.caixa-texto {
+    width: 800px;
+    max-width: 90vw; /* Responsivo para telas menores */
+    height: 400px;
+    padding: 15px;
+    border: 2px solid rgba(247, 102, 182, 0.508);
+    background-color: rgba(247, 102, 182, 0.508);
+    margin: 20px auto;
+    color: white;
+    font-family: system-ui, sans-serif;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+    overflow-y: auto; /* Rolagem vertical se o texto passar da altura */
+}
 
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    }
+/* Texto limitado dentro da caixa com altura máxima e overflow escondido */
+.texto-limitado {
+    width: 300px;
+    max-height: calc(3.5em * 5); /* Limita altura a 5 linhas aproximadamente */
+    line-height: 1.2em;
+    overflow: hidden;
+    white-space: normal;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+    font-family: cursive, system-ui, sans-serif;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-align: center;
+}
 
-    .btn-start {
-      background: #ff4b1f;
-      background: linear-gradient(to right, #ff4b1f, #ff9068);
-      border: none;
-      padding: 15px 40px;
-      font-size: 1.5rem;
-      border-radius: 50px;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(255,75,31,0.6);
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn-start:hover {
-      background: linear-gradient(to right, #372c9b, #752a9a);
-      transform: scale(1.05);
-    }
-
-    .btn-start:active {
-      transform: scale(0.95);
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-  </style>
+    </style>
 </head>
 <body>
-  <h1>Bem-vindo ao Pula Escadinha</h1>
-  <button class="btn-start" onclick="alert('Vamos começar o jogo!')">Começar</button>
-
-  <footer>© 2025 Jogo Incrível. Todos os direitos reservados.</footer>
+    <h2>Jogo da Escadinha</h2>
+    <p></p>
 </body>
 </html>
