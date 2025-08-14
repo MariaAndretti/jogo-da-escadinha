@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jogo da Memória</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jogo da Memória com Telas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🧠 Jogo da Memória</h1>
-  <div class="game-board" id="gameBoard"></div>
-  <button id="restartBtn">Reiniciar</button>
+  <!-- Tela Inicial -->
+  <div class="screen" id="startScreen">
+    <h1>🧠 Jogo da Memória</h1>
+    <button onclick="showScreen('rulesScreen')">Começar</button>
+  </div>
+
+  <!-- Tela de Regras -->
+  <div class="screen" id="rulesScreen">
+    <h2>📜 Regras do Jogo</h2>
+    <p>
+      Clique nas cartas para virar duas de cada vez. Se forem iguais, elas ficam
+      viradas. Combine todos os pares para ganhar.
+    </p>
+    <button onclick="startGame()">Entendi!</button>
+  </div>
+
+  <!-- Tela do Jogo -->
+  <div class="screen" id="gameScreen">
+    <h2>🧩 Jogo da Memória</h2>
+    <div class="game-board" id="gameBoard"></div>
+    <div class="game-info">
+      <p><strong>Pares encontrados:</strong> <span id="pairsFound">0</span> / 8</p>
+    </div>
+    <button onclick="showPartialResults()">Ver Resultados Parciais</button>
+  </div>
+
+  <!-- Tela de Resultados Parciais -->
+  <div class="screen" id="partialResultsScreen">
+    <h2>📊 Resultados Parciais</h2>
+    <ul id="resultsList"></ul>
+    <button onclick="showScreen('gameScreen')">Voltar ao jogo</button>
+  </div>
+
+  <!-- Tela Final -->
+  <div class="screen" id="finalScreen">
+    <h2>🏆 Parabéns!</h2>
+    <p>Você encontrou todos os pares!</p>
+    <p id="finalScore"></p>
+    <button onclick="restartGame()">Reiniciar</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-O tabuleiro tem 16 cartas (8 pares).
-
-Você clica em duas cartas. Se forem iguais, elas permanecem viradas.
-
-Se forem diferentes, elas se viram novamente após 1 segundo.
-
-O botão "Reiniciar" embaralha tudo de novo.
