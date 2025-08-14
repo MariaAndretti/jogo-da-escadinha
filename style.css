@@ -1,9 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    /* Fundo gradiente azul para roxo */
+    background: linear-gradient(135deg, #efa25e 0%, #fa4782 100%);
     margin: 0;
     padding: 20px;
     text-align: center;
+    min-height: 100vh;
+    /* Para garantir que o fundo cubra toda a tela */
+  }
+  
+
+  .lobster-two-regular {
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
   .screen {
@@ -16,10 +25,11 @@ body {
   
   h1, h2 {
     color: #333;
+    font-size: 50px;
   }
   
   button {
-    background-color: #4caf50;
+    background-color: #c92455;
     border: none;
     padding: 10px 20px;
     color: white;
@@ -31,7 +41,7 @@ body {
   }
   
   button:hover {
-    background-color: #388e3c;
+    background-color: #e75686;
   }
   
   .game-board {
