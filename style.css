@@ -1,103 +1,118 @@
 body {
-    /* Fundo gradiente azul para roxo */
-    background: linear-gradient(135deg, #efa25e 0%, #fa4782 100%);
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    min-height: 100vh;
-    /* Para garantir que o fundo cubra toda a tela */
-  }
-  
+  /* Fundo gradiente azul para roxo */
+  background: linear-gradient(135deg, #efa25e 0%, #fa4782 100%);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+}
 
-  .lobster-two-regular {
-    font-family: "Lobster Two", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .screen {
-    display: none;
-  }
-  
-  .screen.active {
-    display: block;
-  }
-  
-  h1, h2 {
-    color: #333;
-    font-size: 50px;
-  }
-  
-  button {
-    background-color: #c92455;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-size: 16px;
-    margin: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #e75686;
-  }
-  
-  .game-board {
-    margin: 20px auto;
-    max-width: 440px;
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-gap: 15px;
-    justify-content: center;
-  }
-  
-  .card {
-    width: 100px;
-    height: 100px;
-    background-color: #4caf50;
-    color: white;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 10px;
-    user-select: none;
-    transition: transform 0.3s;
-  }
-  
-  .card.flipped {
-    background-color: #fff;
-    color: #333;
-    cursor: default;
-    pointer-events: none;
-    transform: rotateY(180deg);
-  }
-  
-  .card.matched {
-    background-color: #2196f3;
-    color: white;
-    cursor: default;
-  }
-  
-  .game-info {
-    font-size: 18px;
-    margin: 10px 0 20px 0;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    max-width: 300px;
-    margin: 0 auto 20px auto;
-    text-align: left;
-  }
-  
-  ul li {
-    font-size: 18px;
-    padding: 6px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
+.lobster-two-regular {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1, h2 {
+  color: #333;
+  font-size: 50px;
+}
+
+button {
+  background-color: #c92455;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e75686;
+}
+
+/* Centralização do conteúdo */
+.main-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Adiciona um espaçamento entre o título e o botão */
+.main-content h1, .main-content h2 {
+  margin-bottom: 20px;
+}
+
+.game-board {
+  margin: 20px auto;
+  max-width: 440px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+  transition: transform 0.3s;
+}
+
+.card.flipped {
+  background-color: #fff;
+  color: #333;
+  cursor: default;
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: #2196f3;
+  color: white;
+  cursor: default;
+}
+
+.game-info {
+  font-size: 18px;
+  margin: 10px 0 20px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  text-align: left;
+}
+
+ul li {
+  font-size: 18px;
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}

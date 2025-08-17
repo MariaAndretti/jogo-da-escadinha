@@ -9,13 +9,13 @@
 <body>
   <!-- Tela Inicial -->
   <div class="screen" id="startScreen">
-    <h1>🧠 Jogo da Memória</h1>
+    <h1>Jogo da Memória</h1>
     <button onclick="showScreen('rulesScreen')">Começar</button>
   </div>
 
   <!-- Tela de Regras -->
   <div class="screen" id="rulesScreen">
-    <h2>📜 Regras do Jogo</h2>
+    <h2>Regras do Jogo</h2>
     <p>
       Clique nas cartas para virar duas de cada vez. Se forem iguais, elas ficam
       viradas. Combine todos os pares para ganhar.
@@ -25,7 +25,7 @@
 
   <!-- Tela do Jogo -->
   <div class="screen" id="gameScreen">
-    <h2>🧩 Jogo da Memória</h2>
+    <h2>Jogo da Memória</h2>
     <div class="game-board" id="gameBoard"></div>
     <div class="game-info">
       <p><strong>Pares encontrados:</strong> <span id="pairsFound">0</span> / 8</p>
@@ -35,15 +35,15 @@
 
   <!-- Tela de Resultados Parciais -->
   <div class="screen" id="partialResultsScreen">
-    <h2>📊 Resultados Parciais</h2>
+    <h2>Resultados Parciais</h2>
     <ul id="resultsList"></ul>
     <button onclick="showScreen('gameScreen')">Voltar ao jogo</button>
   </div>
 
   <!-- Tela Final -->
   <div class="screen" id="finalScreen">
-    <h2>🏆 Parabéns!</h2>
-    <p>Você encontrou todos os pares!</p>
+    <h2>🏆Parabéns!</h2>
+    <p></p>
     <p id="finalScore"></p>
     <button onclick="restartGame()">Reiniciar</button>
   </div>
